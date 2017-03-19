@@ -1,7 +1,3 @@
-# Data_Cleaning_Assignment
-Getting and Cleaning Data Week 4 Assignment
-
-#R scripts
 library(dplyr)
 
 #Read in features and activites data
@@ -67,3 +63,6 @@ activity_subject_data <- tidy_data %>%
         group_by(subjectID, activity) %>%
         summarise_each(funs(overallmean = mean))
 write.table(activity_subject_data, "./activity_subject_data.txt", row.name=FALSE)
+
+
+#########################################################
